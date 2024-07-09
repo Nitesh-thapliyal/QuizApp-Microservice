@@ -1,11 +1,13 @@
 package com.nitesh.question_service.model;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 // we created wrapper class bcz we were getting question from db using id and in out model there rightanswer was also present and we don't want user to see right answer when he
 // is fetching for geting question by id
 @Data
+@NoArgsConstructor
 public class QuestionWrapper {
     private Integer id;
     private String questionTitle;

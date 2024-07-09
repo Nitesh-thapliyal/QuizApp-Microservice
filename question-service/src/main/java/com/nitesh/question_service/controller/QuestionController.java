@@ -2,6 +2,7 @@ package com.nitesh.question_service.controller;
 
 
 import com.nitesh.question_service.model.Question;
+import com.nitesh.question_service.model.QuestionWrapper;
 import com.nitesh.question_service.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -44,7 +45,13 @@ public class QuestionController {
     }
 
     // getQuestion (questionId)
+    @PostMapping("getQuestions")
+    public ResponseEntity<List<QuestionWrapper>> getQuestionsFromId(@RequestBody List<Integer> questionIds){
+        return questionService.getQuestionFromId(questionIds);
+    }
 
     // get Score
+
+
 
 }
