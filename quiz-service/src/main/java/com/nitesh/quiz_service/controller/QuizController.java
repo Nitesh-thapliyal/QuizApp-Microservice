@@ -4,6 +4,7 @@ import com.nitesh.quiz_service.model.QuestionWrapper;
 import com.nitesh.quiz_service.model.QuizDto;
 import com.nitesh.quiz_service.model.Response;
 import com.nitesh.quiz_service.service.QuizService;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,8 +28,8 @@ public class QuizController {
       return  quizService.getQuizQuestions(id);
     }
 
-/*    @PostMapping("submit/{id}")
+    @PostMapping("submit/{id}")
     public ResponseEntity<Integer> submitQuiz(@PathVariable Integer id, @RequestBody List<Response> response){
         return quizService.calculateResult(id, response);
-    }*/
+    }
 }
