@@ -5,6 +5,7 @@ import com.nitesh.question_service.model.Question;
 import com.nitesh.question_service.model.QuestionWrapper;
 import com.nitesh.question_service.model.Response;
 import com.nitesh.question_service.service.QuestionService;
+import org.hibernate.cfg.Environment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -18,6 +19,7 @@ public class QuestionController {
 
     @Autowired
     QuestionService questionService;
+
 
     @GetMapping("allQuestions")
     public ResponseEntity<List<Question>> getAllQuestions(){
