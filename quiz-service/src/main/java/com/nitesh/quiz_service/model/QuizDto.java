@@ -1,4 +1,4 @@
-package com.nitesh.quiz_service.controller;
+package com.nitesh.quiz_service.model;
 
 import lombok.Data;
 

@@ -1,9 +1,9 @@
 package com.nitesh.quiz_service.controller;
 
-
-import com.nitesh.quizapp.model.QuestionWrapper;
-import com.nitesh.quizapp.model.Response;
-import com.nitesh.quizapp.service.QuizService;
+import com.nitesh.quiz_service.model.QuestionWrapper;
+import com.nitesh.quiz_service.model.QuizDto;
+import com.nitesh.quiz_service.model.Response;
+import com.nitesh.quiz_service.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,8 +18,8 @@ public class QuizController {
     QuizService quizService;
 
     @PostMapping("create")
-    public ResponseEntity<String> createQuiz(@RequestParam String category, @RequestParam int numQ, @RequestParam String title){
-        return quizService.createQuiz(category, numQ, title);
+    public ResponseEntity<String> createQuiz(@RequestBody QuizDto quizDto){
+        return quizService.createQuiz(quizDto.getCategoryName(), quizDto.getNumQuestions(), quizDto.getTitlte());
     }
 
     @GetMapping("get/{id}")
@@ -27,8 +27,8 @@ public class QuizController {
       return  quizService.getQuizQuestions(id);
     }
 
-    @PostMapping("submit/{id}")
+/*    @PostMapping("submit/{id}")
     public ResponseEntity<Integer> submitQuiz(@PathVariable Integer id, @RequestBody List<Response> response){
         return quizService.calculateResult(id, response);
-    }
+    }*/
 }
