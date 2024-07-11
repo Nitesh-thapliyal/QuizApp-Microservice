@@ -1,4 +1,4 @@
-## QuizApp-Microservice: A Scalable and Maintainable Quiz Application
+## Quizzify-Microservice: A Scalable and Maintainable Quiz Application
 
 This repository implements a quiz application using a robust microservices architecture. This approach promotes modularity, scalability, and independent development, making it ideal for building complex and evolving applications.
 
@@ -19,7 +19,7 @@ The application leverages the following key components:
 * **Eureka Discovery Server:** Functions as a service registry, maintaining a centralized record of all available microservices within the application. Each service registers itself with Eureka, providing its location and other relevant details.
 * **Quiz Service:** Manages the creation, retrieval, and overall lifecycle of quizzes within the application.
 * **Question Service:** Handles individual questions, including their creation, retrieval, and associated metadata.
-* **Feign Client:** A library utilized by the Quiz Service to seamlessly communicate with the Question Service. It simplifies HTTP request exchanges between microservices by abstracting away underlying network complexities.
+* **Feign Client:** A library utilized by the Quiz Service to seamlessly communicate with the Question Service. It simplifies HTTP request exchanges between microservices by abstracting away underlying network complexities and also helps in load balancing.
 
 ### Choosing Microservices for Your Project
 
@@ -39,13 +39,13 @@ To run this application, ensure you have the following tools installed:
 **1. Clone the Repository**
 
 ```bash
-git clone https://github.com/<your-username>/QuizApp-Microservice.git
+git clone https://github.com/<your-username>/Quizzify-Microservice.git
 ```
 
 **2. Build the Services**
 
 ```bash
-cd QuizApp-Microservice
+cd Quizzify-Microservice
 mvn clean install
 ```
 
